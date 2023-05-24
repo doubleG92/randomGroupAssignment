@@ -1,14 +1,29 @@
-const circles = document.querySelectorAll("#personBox #grid-box #circle");
-const boxes = document.querySelectorAll("#gridBoxes #boxes");
+const gridBox = document.getElementById('grid-box')
+const btn = document.getElementById('shuffleButton')
+const arr = ['Gagik Galstyan','Gevorg Mirzoyan','Hovo Ohanyan','Artur Petrosyan','Mary Grigoryan']
 
-const shuffledCircles = Array.from(circles).sort(() => Math.random() - 0.5);
 
-let circleIndex = 0;
-boxes.forEach((box) => {
-  for (let i = 0; i < 3; i++) {
-    if (circleIndex < shuffledCircles.length) {
-      box.appendChild(shuffledCircles[circleIndex]);
-      circleIndex++;
-    }
-  }
-});
+function forPaint () {
+    arr.forEach(item => {
+        const element = document.createElement('div')
+        element.classList.add('circle')
+        element.innerText = item
+        gridBox.appendChild(element)
+    })
+}
+
+forPaint()
+
+function shuffle () {
+    const randomIndex = Math.floor(arr.length * Math.random())
+    arr.splice(randomIndex, 1)
+    gridBox.innerHTML = ''
+    forPaint()
+    // giveTheResult()
+}
+
+// function giveTheResult () {
+    
+// }
+
+btn.addEventListener('click', shuffle)

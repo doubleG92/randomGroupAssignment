@@ -8,7 +8,6 @@ main {
     'personBox gridboxes gridboxes'
     'shuffleButton shuffleButton shuffleButton';
     background: #d6d4d4;
-    height: 100vh;
     #personBox {
         box-sizing: border-box;
         width: 430px;
@@ -31,11 +30,11 @@ main {
             grid-template-rows: repeat(1,50px);
             gap: 10px;
             z-index: 1;
-            #circle {
+            .circle {
                 padding: 14px 0;
                 border: none;
                 border-radius: 50%;
-                color: rgb(255, 255, 255);
+                color: black;
                 box-shadow: inset -4px -3px 10px rgb(0, 0, 0);
                 &:hover {
                     box-shadow: inset 4ox 4px 10px yellow,
