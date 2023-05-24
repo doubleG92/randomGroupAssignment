@@ -2,7 +2,6 @@ const gridBox = document.getElementById('grid-box')
 const btn = document.getElementById('shuffleButton')
 const wheelBlock = document.querySelector('.wheel-and-hamster')
 
-
 const arr = ['Gagik Galstyan','Gevorg Mirzoyan','Hovo Ohanyan','Artur Petrosyan','Mary Grigoryan']
 
 
