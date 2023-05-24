@@ -1,5 +1,7 @@
 const gridBox = document.getElementById('grid-box')
 const btn = document.getElementById('shuffleButton')
+const wheelBlock = document.querySelector('.wheel-and-hamster')
+
 const arr = ['Gagik Galstyan','Gevorg Mirzoyan','Hovo Ohanyan','Artur Petrosyan','Mary Grigoryan']
 
 
@@ -18,6 +20,10 @@ function shuffle () {
     const randomIndex = Math.floor(arr.length * Math.random())
     arr.splice(randomIndex, 1)
     gridBox.innerHTML = ''
+    wheelBlock.style.display = 'block'
+    setTimeout (function () {
+        wheelBlock.style.display = 'none'
+    },2500)
     forPaint()
     // giveTheResult()
 }
