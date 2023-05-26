@@ -34,6 +34,7 @@ main #personBox #grid-box {
   z-index: 1;
 }
 main #personBox #grid-box .circle {
+  transition: transform 1s;
   padding: 14px 0;
   border: none;
   border-radius: 50%;
@@ -43,6 +44,17 @@ main #personBox #grid-box .circle {
 main #personBox #grid-box .circle:hover {
   box-shadow: inset 4ox 4px 10px yellow,
                     inset 4px 4px 10px green;
+}
+main #personBox #grid-box .circle .animate {
+  animation: moveAnimation 1s;
+}
+@keyframes movePersonAnimation {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(var(--translateX), var(--translateY), 0);
+  }
 }
 main #gridBoxes {
   display: grid;
