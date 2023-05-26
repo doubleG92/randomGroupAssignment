@@ -2,18 +2,17 @@
     margin: 0;
     padding: 0;
 }
-main {
+body {
+  background: linear-gradient(rgba(0, 0, 255, 0.507)  ,rgba(0, 0, 0, 0.566));
+  padding: 20px;
+  main {
     display: grid;
-    grid-template-areas: 
-    'personBox gridboxes gridboxes'
-    'shuffleButton shuffleButton shuffleButton';
-    background: #030030;
+    grid-template-columns: 1fr 1fr 2fr;
+    width: 100%;
     #personBox {
-        margin-top: 20px;
-        margin-left: 20px;
         box-sizing: border-box;
-        width: 430px;
-        height: 600px;
+        width: 100%;
+        height: 72%;
         background: rgba(179, 180, 226, 0.274);
         border: 1px solid white;
         box-shadow: inset 4px 4px 15px #000b3a, inset -4px -3px 20px #00000085;
@@ -28,15 +27,16 @@ main {
         font-weight: bolder;
         #grid-box {
             display: grid;
-            grid-template-columns: repeat(6,1fr);
-            grid-template-rows: repeat(1,50px);
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(9,50px);
             gap: 10px;
             z-index: 1;
+            font-size: 14px;
+            width: 100%;
             .circle {
                 transition: transform 1s;
-                padding: 14px 0;
-                border: none;
-                border-radius: 50%;
+                padding: 14px;
+                border-radius: 30%;
                 color: black;
                 box-shadow: inset -4px -3px 10px rgb(0, 0, 0);
                 &:hover {
@@ -63,21 +63,15 @@ main {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(3,250px );
-        justify-content: flex-end;
-        align-items: flex-end;
         gap: 40px;
-        width: 720px;
-        margin-top: 45px;
-        margin-left: 50px;
+        width: 100%;
         .boxes {
+            font-size: 16px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #ffffff;
             border-radius: 30px;
-            height: 270px;
-            margin-top: 20px;
+            height: 100%;
+            margin-top: 26px;
             position: relative;
             border-radius: 10px;
             background-color: rgb(235, 235, 235);
@@ -108,9 +102,10 @@ main {
             }
             .coverBox {
               color: white;
+              text-align: center;
               top: 0;
               position: absolute;
-              background-color: rgb(2, 10, 53);
+              background-color: rgb(65, 76, 136);
               width: 100%;
               height: 100%;
               border-radius: 10px;
@@ -131,7 +126,7 @@ main {
               -webkit-box-pack: center;
               -ms-flex-pack: center;
               justify-content: center;
-              font-size: 20px;
+              font-size: 24px;
             }
         }
     }
@@ -142,16 +137,16 @@ main {
           button {
             height: 100px;
             font-family: monospace;
-            font-size: 1.5rem;
+            font-size: 24px;
             color: #FAFAFA;
             text-transform: uppercase;
-            padding: 10px 20px;
+            padding: 10px;
             border-radius: 10px;
             border: 2px solid #FAFAFA;
-            background: #00014d;
+            background-color: rgb(84, 101, 193);
             box-shadow: 3px 3px #fafafa;
             cursor: pointer;
-            margin: 35px 0;
+            margin: 35px;
             &:active {
               box-shadow: 4px 4px 40px white;
               transform: translate(3px, 3px);
@@ -454,4 +449,5 @@ main {
     100% {
         transform: scale(1, 1);
     }
+}
 }

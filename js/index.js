@@ -9,8 +9,8 @@ const box5 = document.getElementById('box5');
 const box6 = document.getElementById('box6');
 
 const boxElements = [box1, box2, box3, box4, box5, box6]
-const arr = ['Gagik Galstyan','Gevorg Mirzoyan','Hovo Ohanyan','Artur Petrosyan','Mary Grigoryan', 'person 6', 'person 7', 'person 8',
-'person 9','person 10', 'person 11', 'person 12', 'person 13', 'person 14', 'person 15', 'person 16', 'person 17', 'person 18']
+const arr = ['Գագիկ Գալստյան', 'Գևորգ Միրզոյան', 'Հովո Օհանյան', 'Արթուր Պետրոսյան', 'Մերի Գրիգորյան', 'Ելեն Հայրապետյան', 'Դավիթ Մուրադյան', 'Գագիկ Հարությունյան', 'Գևորգ Միրզախանյան',
+'Լորետա Բադալյան', 'Մարիամ Գրիգորյան Մ․', 'Մարիամ Գրիգորյան Փ․', 'Միհրան Գուտներյան', 'Սաթենիկ Ներսիսյան', 'Շուշան Այվազյան', 'Սահակ Ալեքսանյան', 'Սամվել Ամիրյան', 'Մեսրոպ Ղուկասյան']
 
 function forPaint () {
     arr.forEach(item => {
@@ -38,7 +38,6 @@ function movePerson(element, selectedBox) {
   
     element.style.transform = `translate(${translateX}px, ${translateY}px)`;
     
-    // Apply font size and color when moving
     element.style.fontSize = '24px';
     element.style.color = 'white';
   
@@ -47,7 +46,6 @@ function movePerson(element, selectedBox) {
       element.classList.remove('animate');
       selectedBox.appendChild(element);
       
-      // Reset font size and color after moving
       element.style.fontSize = '';
       element.style.color = '';
     }, 2000);
