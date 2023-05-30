@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-  background: linear-gradient(rgba(0, 0, 255, 0.507)  ,rgba(0, 0, 0, 0.566));
+  background: linear-gradient(rgba(0, 0, 255, 0.507)  ,rgba(7, 0, 73, 0.566));
   padding: 20px;
   main {
     display: grid;
@@ -31,11 +31,11 @@ body {
             grid-template-rows: repeat(9,50px);
             gap: 10px;
             z-index: 1;
-            font-size: 14px;
+            font-size: 12px;
             width: 100%;
             .circle {
                 transition: transform 1s;
-                padding: 14px;
+                padding: 13px;
                 border-radius: 30%;
                 color: black;
                 box-shadow: inset -4px -3px 10px rgb(0, 0, 0);
@@ -94,12 +94,13 @@ body {
             justify-content: center;
             color: #000000;
             transition: all 0.5s;
+            text-align: center;
             &:hover .coverBox {
               -webkit-transition: all 0.5s;
               transition: all 0.5s;
-              -webkit-transform: rotatey(-80deg);
-              -ms-transform: rotatey(-80deg);
-              transform: rotatey(-80deg);
+              -webkit-transform: rotatey(-88deg);
+              -ms-transform: rotatey(-88deg);
+              transform: rotatey(-88deg);
             }
             .coverBox {
               color: white;
@@ -127,7 +128,7 @@ body {
               -webkit-box-pack: center;
               -ms-flex-pack: center;
               justify-content: center;
-              font-size: 24px;
+              font-size: 18px;
             }
         }
     }
@@ -138,7 +139,7 @@ body {
           button {
             height: 100px;
             font-family: monospace;
-            font-size: 24px;
+            font-size: 21px;
             color: #FAFAFA;
             text-transform: uppercase;
             padding: 10px;
