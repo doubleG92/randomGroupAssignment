@@ -38,8 +38,7 @@ function movePerson(element, selectedBox) {
   
     element.style.transform = `translate(${translateX}px, ${translateY}px)`;
     
-    element.style.fontSize = '24px';
-    element.style.color = 'white';
+    element.style.fontSize = '16px';
   
     setTimeout(() => {
       element.style.transform = '';
